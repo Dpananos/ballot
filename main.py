@@ -1,4 +1,3 @@
-from xml.dom.minidom import DocumentFragment
 import numpy as np
 import pandas as pd
 
@@ -39,7 +38,7 @@ def main(file):
 
     # Now for our model.
     # Here is how the prediction will go
-    # When we recieve a dataset, we will one hot encode (OHE) the Byte length
+    # When we receive a dataset, we will one hot encode (OHE) the Byte length
     # This allows for non-parametric estimation of P(Byte Lenfth|Vote)
     # In order to properly validate this model, we need to assume we have no knowledge of what the byte length can be
     # Create a pipeline which will automatically detect unique levels of Bytes and OHE them.
