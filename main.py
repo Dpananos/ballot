@@ -13,28 +13,28 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-
 def main(file):
 
     # Load in the data
     df = pd.read_csv(file)
-    df.columns = ['vote','bytes']
+    df.columns = ["vote", "bytes"]
 
-    _, ax = plt.subplots(dpi = 240)
-    ax.set_title('Byte Length Distribution By Vote')
-    sns.histplot(data=df, x='bytes', hue='vote', ax=ax)
+    _, ax = plt.subplots(dpi=240)
+    ax.set_title("Byte Length Distribution By Vote")
+    sns.histplot(data=df, x="bytes", hue="vote", ax=ax)
     plt.tight_layout()
-    plt.savefig('figures/conditional_distributions.png')
-
+    plt.savefig("figures/conditional_distributions.png")
 
     # Make data to pass to experiment
-    X = df[['bytes']].values
+    X = df[["bytes"]].values
     y = df.vote.values
     # Split the data into a train/test set. Use half for training, half for testing.
-    Xtrain, Xtest, ytrain, ytest = train_test_split(X, y, train_size=0.5, random_state=19920908, stratify=y)
+    Xtrain, Xtest, ytrain, ytest = train_test_split(
+        X, y, train_size=0.5, random_state=19920908, stratify=y
+    )
 
     # Baseline will be a dummy model
-    dummy_clf = DummyClassifier(strategy='uniform')
+    dummy_clf = DummyClassifier(strategy="stratified")
 
     # Now for our model.
     # Here is how the prediction will go
@@ -45,41 +45,35 @@ def main(file):
     # If at prediction time the OHE'er sees a new level, it should just ignore it.
 
     # Here is the OHE'er
-    one_hot_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
+    one_hot_encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
 
-    # Here is a column transformer which will apply the OHE'er to the Bytes column
+    # Here is an instantiation of the model we will be running.
     naive_bayes = MultinomialNB()
 
     # Place them together in a single estimator pipeline.  This will transform bytes and make predictions in a single call
-    steps = [('ohe', one_hot_encoder), ('naive_bayes', naive_bayes)]
+    steps = [("ohe", one_hot_encoder), ("naive_bayes", naive_bayes)]
 
     nb_model = Pipeline(steps=steps)
 
-
     # Run experiments
-    model_names = ('Dummy_Classifier','Naive_Bayes')
+    model_names = ("Dummy_Classifier", "Naive_Bayes")
     models = (dummy_clf, nb_model)
     for name, model in zip(model_names, models):
 
         experiment = Experiment(
-                                experiment_name=name,
-                                model=model,
-                                Xtrain=Xtrain,
-                                Xtest=Xtest,
-                                ytrain=ytrain,
-                                ytest=ytest
-                                )
+            experiment_name=name,
+            model=model,
+            Xtrain=Xtrain,
+            Xtest=Xtest,
+            ytrain=ytrain,
+            ytest=ytest,
+        )
 
         experiment.run()
 
-
-
-
-
-
     return None
 
-if __name__ == '__main__':
 
+if __name__ == "__main__":
 
-    main(file='data/selwyn-just-mayor.csv')
+    main(file="data/selwyn-just-mayor.csv")
