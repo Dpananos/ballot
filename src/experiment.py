@@ -1,44 +1,37 @@
+from typing import Protocol
 from dataclasses import dataclass
-from typing import Union, List
-
+from sklearn.model_selection import RepeatedKFold, cross_val_score
+from sklearn.metrics import confusion_matrix, classification_report, ConfusionMatrixDisplay
 from numpy.typing import ArrayLike
-from sklearn.pipeline import Pipeline
-from sklearn.dummy import DummyClassifier
-from sklearn.metrics import (
-    confusion_matrix,
-    accuracy_score,
-    classification_report,
-    ConfusionMatrixDisplay,
-)
-
 import matplotlib.pyplot as plt
 
+
+class ScikitModel(Protocol):
+    # Protocol for type hinting in the Experiment dataclass
+    def fit(self, X, y, sample_weight=None): ...
+    def predict(self, X): ...
+    def score(self, X, y, sample_weight=None): ...
+    def set_params(self, **params): ...
 
 @dataclass
 class Experiment:
 
     experiment_name: str
-    model: Union[Pipeline, DummyClassifier]
+    model: ScikitModel
     Xtrain: ArrayLike
     ytrain: ArrayLike
     Xtest: ArrayLike
     ytest: ArrayLike
 
-    def run(self) -> List[float]:
+    def run(self) -> None:
 
         self.model.fit(self.Xtrain, self.ytrain)
         ypred = self.model.predict(self.Xtest)
         cm = confusion_matrix(y_true=self.ytest, y_pred=ypred)
 
-        # Compute accuracy scores
-
-        accuracy = accuracy_score(y_true=self.ytest, y_pred=ypred)
-        stratified_accuracy = cm.diagonal() / cm.sum(axis=1)
-
         # Make a classification report
-        with open(
-            f"results/{self.experiment_name}_classification_report.txt", "w"
-        ) as report:
+        report_name = f"results/{self.experiment_name}_classification_report.txt"
+        with open(report_name, "w") as report:
             cr = classification_report(y_true=self.ytest, y_pred=ypred)
             report.write(cr)
 
@@ -55,4 +48,4 @@ class Experiment:
         plt.tight_layout()
         plt.savefig(f"figures/{self.experiment_name}_conusion_matrix.png")
 
-        return [accuracy, stratified_accuracy]
+        return None
