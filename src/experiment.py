@@ -1,6 +1,6 @@
-from typing import Protocol
-from dataclasses import dataclass
-from sklearn.model_selection import RepeatedKFold, cross_val_score
+from typing import Protocol, List
+from dataclasses import dataclass, field
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report, ConfusionMatrixDisplay
 from numpy.typing import ArrayLike
 import matplotlib.pyplot as plt
@@ -19,10 +19,16 @@ class Experiment:
     experiment_name: str
     model: ScikitModel
     save_dir: str
-    Xtrain: ArrayLike
-    ytrain: ArrayLike
-    Xtest: ArrayLike
-    ytest: ArrayLike
+    X: ArrayLike
+    y: ArrayLike
+    Xtrain: ArrayLike = field(init=False)
+    ytrain: ArrayLike = field(init=False)
+    Xtest: ArrayLike  = field(init=False)
+    ytest: ArrayLike  = field(init=False)
+
+    def __post_init__(self) -> None:
+
+        self.Xtrain, self.Xtest, self.ytrain, self.ytest =  train_test_split(self.X, self.y, train_size=0.5, random_state=19920908, stratify=self.y)
 
     def run(self) -> None:
 
