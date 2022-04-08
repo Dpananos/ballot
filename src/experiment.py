@@ -18,6 +18,7 @@ class Experiment:
 
     experiment_name: str
     model: ScikitModel
+    save_dir: str
     Xtrain: ArrayLike
     ytrain: ArrayLike
     Xtest: ArrayLike
@@ -30,7 +31,7 @@ class Experiment:
         cm = confusion_matrix(y_true=self.ytest, y_pred=ypred)
 
         # Make a classification report
-        report_name = f"results/{self.experiment_name}_classification_report.txt"
+        report_name = f"{self.save_dir}/results/{self.experiment_name}_classification_report.txt"
         with open(report_name, "w") as report:
             cr = classification_report(y_true=self.ytest, y_pred=ypred)
             report.write(cr)
@@ -46,6 +47,6 @@ class Experiment:
             normalize="true",
         )
         plt.tight_layout()
-        plt.savefig(f"figures/{self.experiment_name}_conusion_matrix.png")
+        plt.savefig(f"{self.save_dir}/figures/{self.experiment_name}_conusion_matrix.png")
 
         return None
