@@ -8,12 +8,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-def voting_experiment(file:str, labels: str, features: str, save_dir: str)->None:
+def voting_experiment(file:str, labels: str, features: str, save_dir: str) -> None:
 
     # Check that we have a place to store the results from the experiment
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
-        os.makedirs(f"{save_dir}/results")
+        os.makedirs(f"{save_dir}/classification_report")
         os.makedirs(f"{save_dir}/figures")
 
     # Load in the data

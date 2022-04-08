@@ -1,16 +1,25 @@
+from typing import Protocol
+from .experiment import ScikitModel
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.dummy import DummyClassifier
 
-def dummy_classifier():
+class ScikitModel(Protocol):
+    # Protocol for type hinting in the Experiment dataclass
+    def fit(self, X, y, sample_weight=None): ...
+    def predict(self, X): ...
+    def score(self, X, y, sample_weight=None): ...
+    def set_params(self, **params): ...
+
+
+def dummy_classifier() -> ScikitModel:
 
     dummy_clf = DummyClassifier(strategy="stratified")
 
     return dummy_clf
 
-
-def naive_bayes_classifier():
+def naive_bayes_classifier() -> ScikitModel:
 
     # Here is the OHE'er
     one_hot_encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
