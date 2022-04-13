@@ -1,5 +1,4 @@
 from typing import Protocol
-from .experiment import ScikitModel
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
