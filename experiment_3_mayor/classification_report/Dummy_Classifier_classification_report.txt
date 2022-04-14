@@ -1,0 +1,12 @@
+                  precision    recall  f1-score   support
+
+         ABSTAIN       0.16      0.16      0.16     10692
+Arthur AUGUSTINE       0.17      0.17      0.17     10672
+     Carion FENN       0.16      0.16      0.16     10669
+  Colleen JORDAN       0.17      0.17      0.17     10653
+  Jennifer BROWN       0.17      0.17      0.17     10654
+   Shaun COLLIER       0.17      0.17      0.17     10707
+
+        accuracy                           0.17     64047
+       macro avg       0.17      0.17      0.17     64047
+    weighted avg       0.17      0.17      0.17     64047
