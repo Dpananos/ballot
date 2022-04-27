@@ -2,9 +2,12 @@
 title:
 author:
 date:
-output: pdf_document
+output: 
+  pdf_document: 
+    keep_tex: yes
 header-includes:
    - \usepackage{bm}
+keep_tex: yes
 ---
 
 ## Methods

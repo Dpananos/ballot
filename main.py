@@ -19,6 +19,7 @@ def voting_experiment(file:str, label: str, save_dir: str) -> None:
     # Load in the data
     X, y = load_data(file=file, label=label)
 
+    # Plot the conditional distributions
     _, ax = plt.subplots(dpi=240)
     ax.set_title("Byte Length Distribution By Vote")
     sns.histplot(x=X.ravel(), hue=y, ax=ax)
