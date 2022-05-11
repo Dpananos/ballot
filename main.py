@@ -45,6 +45,7 @@ def voting_experiment(file:str, label: str, save_dir: str) -> None:
 
 
 def main() -> None:
+
     # Experiment 1: Just the mayor from Selwyn
     voting_experiment(file='selwyn-just-mayor.csv', label='mayor', save_dir='experiment_1')
 
@@ -56,6 +57,16 @@ def main() -> None:
     voting_experiment(file='ajax-ward-1.csv', label='mayor', save_dir='experiment_3_mayor')
     voting_experiment(file='ajax-ward-1.csv', label='councillor', save_dir='experiment_3_councillor')
     voting_experiment(file='ajax-ward-1.csv', label='regional_councillor', save_dir='experiment_3_regional_councillor')
+
+    # Experiment 4
+    voting_experiment(file='potential_fix.csv', label='mayor', save_dir='experiment_4_fix')
+
+    #Experiment 5
+    voting_experiment(file='simulation_x_ballot_secrecy_largesample.csv', label='mayor', save_dir='experiment_5_fix')
+    
+    #Experiment 6
+    voting_experiment(file='zabstain.csv', label='mayor', save_dir='experiment_6_alphabetical_check')
+
 
     return None
 

@@ -14,7 +14,7 @@ class ScikitModel(Protocol):
 
 def dummy_classifier() -> ScikitModel:
 
-    dummy_clf = DummyClassifier(strategy="prior")
+    dummy_clf = DummyClassifier(strategy="uniform")
 
     return dummy_clf
 
