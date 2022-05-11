@@ -1,9 +1,6 @@
 import os
-
-
 from src.experiment import Experiment, load_data
 from src.models import dummy_classifier, naive_bayes_classifier
-
 import seaborn as sns
 import matplotlib.pyplot as plt
 
