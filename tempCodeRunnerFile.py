@@ -1,2 +1,0 @@
-egional_councillor')
-    '''
