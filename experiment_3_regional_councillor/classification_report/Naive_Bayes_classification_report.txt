@@ -1,8 +1,8 @@
                          precision    recall  f1-score   support
 
-                ABSTAIN       0.89      0.30      0.44     21416
-       Marilyn CRAWFORD       0.65      0.79      0.72     21275
-Mohamed Kalim KARATELLA       0.55      0.81      0.66     21356
+                ABSTAIN       0.89      0.30      0.45     21582
+       Marilyn CRAWFORD       0.66      0.79      0.72     21212
+Mohamed Kalim KARATELLA       0.55      0.80      0.65     21253
 
                accuracy                           0.63     64047
               macro avg       0.70      0.63      0.61     64047

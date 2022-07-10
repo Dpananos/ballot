@@ -36,7 +36,7 @@ def voting_experiment(file:str, label: str, save_dir: str) -> None:
 
         experiment = Experiment(experiment_name=name, model=model, save_dir=save_dir, X=X, y=y)
         experiment.run()
-        experiment.validate()
+        # experiment.validate()
 
     return None
 

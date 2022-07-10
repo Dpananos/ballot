@@ -1,9 +1,9 @@
                          precision    recall  f1-score   support
 
-                ABSTAIN       0.33      0.33      0.33     21416
-       Marilyn CRAWFORD       0.33      0.33      0.33     21275
-Mohamed Kalim KARATELLA       0.33      0.33      0.33     21356
+                ABSTAIN       0.34      0.33      0.34     21582
+       Marilyn CRAWFORD       0.33      0.33      0.33     21212
+Mohamed Kalim KARATELLA       0.33      0.34      0.34     21253
 
-               accuracy                           0.33     64047
-              macro avg       0.33      0.33      0.33     64047
-           weighted avg       0.33      0.33      0.33     64047
+               accuracy                           0.34     64047
+              macro avg       0.34      0.34      0.34     64047
+           weighted avg       0.34      0.34      0.34     64047

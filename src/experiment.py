@@ -38,7 +38,7 @@ class Experiment:
 
     def __post_init__(self) -> None:
 
-        self.Xtrain, self.Xtest, self.ytrain, self.ytest =  train_test_split(self.X, self.y, train_size=0.5, random_state=19920908, stratify=self.y)
+        self.Xtrain, self.Xtest, self.ytrain, self.ytest =  train_test_split(self.X, self.y, train_size=0.5, random_state=1010)
 
     def validate(self):
 

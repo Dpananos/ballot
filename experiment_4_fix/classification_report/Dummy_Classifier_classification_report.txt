@@ -1,10 +1,10 @@
                      precision    recall  f1-score   support
 
-      Andy Mitchell       0.24      0.24      0.24      1000
-Linda Marlene Eales       0.23      0.23      0.23      1000
-              OTHER       0.24      0.25      0.24      1000
-          Ron Black       0.25      0.25      0.25      1000
+      Andy Mitchell       0.26      0.25      0.25      1049
+Linda Marlene Eales       0.26      0.25      0.26      1010
+              OTHER       0.23      0.24      0.24       966
+          Ron Black       0.25      0.26      0.25       975
 
-           accuracy                           0.24      4000
-          macro avg       0.24      0.24      0.24      4000
-       weighted avg       0.24      0.24      0.24      4000
+           accuracy                           0.25      4000
+          macro avg       0.25      0.25      0.25      4000
+       weighted avg       0.25      0.25      0.25      4000

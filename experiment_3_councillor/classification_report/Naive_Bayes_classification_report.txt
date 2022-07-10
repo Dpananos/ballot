@@ -1,13 +1,13 @@
                           precision    recall  f1-score   support
 
-                 ABSTAIN       0.58      0.43      0.50      9173
-     Christopher GILLETT       0.21      0.09      0.12      9144
-       Margaret CECCONET       0.20      0.27      0.23      9106
-Marsha Lynn JONES DOOLEY       0.67      0.47      0.55      9128
-     Michael BISSONNETTE       0.30      0.29      0.30      9182
-         Rob TYLER MORIN       0.38      0.08      0.13      9185
-           Robert BISHOP       0.23      0.60      0.33      9129
+                 ABSTAIN       0.58      0.44      0.50      9176
+     Christopher GILLETT       0.00      0.00      0.00      9171
+       Margaret CECCONET       0.19      0.26      0.22      9129
+Marsha Lynn JONES DOOLEY       0.66      0.46      0.54      9090
+     Michael BISSONNETTE       0.27      0.37      0.31      9279
+         Rob TYLER MORIN       0.36      0.08      0.13      9043
+           Robert BISHOP       0.23      0.61      0.34      9159
 
                 accuracy                           0.32     64047
-               macro avg       0.37      0.32      0.31     64047
-            weighted avg       0.37      0.32      0.31     64047
+               macro avg       0.33      0.32      0.29     64047
+            weighted avg       0.33      0.32      0.29     64047

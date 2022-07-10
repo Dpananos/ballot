@@ -1,9 +1,9 @@
                      precision    recall  f1-score   support
 
-            ABSTAIN       0.23      0.22      0.22       750
-      Andy Mitchell       0.25      0.26      0.26       750
-Linda Marlene Eales       0.24      0.25      0.25       750
-          Ron Black       0.27      0.27      0.27       750
+            ABSTAIN       0.25      0.25      0.25       747
+      Andy Mitchell       0.24      0.23      0.23       761
+Linda Marlene Eales       0.26      0.25      0.25       755
+          Ron Black       0.25      0.26      0.26       737
 
            accuracy                           0.25      3000
           macro avg       0.25      0.25      0.25      3000
