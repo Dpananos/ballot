@@ -1,0 +1,16 @@
+[2022-11-08 15:56:39,447][root][INFO] - Experiment Results
+[2022-11-08 15:56:39,447][root][INFO] - Model = Dummy Classifier
+[2022-11-08 15:56:39,447][root][INFO] - 
+                  precision    recall  f1-score   support
+
+         ABSTAIN       0.16      0.16      0.16     10752
+Arthur AUGUSTINE       0.17      0.17      0.17     10699
+     Carion FENN       0.17      0.16      0.17     10630
+  Colleen JORDAN       0.17      0.17      0.17     10629
+  Jennifer BROWN       0.16      0.16      0.16     10626
+   Shaun COLLIER       0.16      0.17      0.17     10711
+
+        accuracy                           0.17     64047
+       macro avg       0.17      0.17      0.17     64047
+    weighted avg       0.17      0.17      0.17     64047
+

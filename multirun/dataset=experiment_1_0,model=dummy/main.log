@@ -1,0 +1,14 @@
+[2022-11-08 15:56:38,305][root][INFO] - Experiment Results
+[2022-11-08 15:56:38,305][root][INFO] - Model = Dummy Classifier
+[2022-11-08 15:56:38,305][root][INFO] - 
+                     precision    recall  f1-score   support
+
+            ABSTAIN       0.23      0.23      0.23       985
+      Andy Mitchell       0.26      0.26      0.26      1011
+Linda Marlene Eales       0.25      0.24      0.25      1012
+          Ron Black       0.24      0.25      0.25       992
+
+           accuracy                           0.25      4000
+          macro avg       0.25      0.25      0.25      4000
+       weighted avg       0.25      0.25      0.25      4000
+

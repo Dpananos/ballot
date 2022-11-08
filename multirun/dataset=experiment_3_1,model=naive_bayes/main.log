@@ -1,0 +1,13 @@
+[2022-11-08 15:56:43,636][root][INFO] - Experiment Results
+[2022-11-08 15:56:43,637][root][INFO] - Model = Naive Bayes
+[2022-11-08 15:56:43,637][root][INFO] - 
+                         precision    recall  f1-score   support
+
+                ABSTAIN       0.89      0.30      0.45     21288
+       Marilyn CRAWFORD       0.66      0.79      0.72     21257
+Mohamed Kalim KARATELLA       0.56      0.81      0.66     21502
+
+               accuracy                           0.63     64047
+              macro avg       0.70      0.63      0.61     64047
+           weighted avg       0.70      0.63      0.61     64047
+

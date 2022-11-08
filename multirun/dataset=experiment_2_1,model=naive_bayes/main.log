@@ -1,0 +1,13 @@
+[2022-11-08 15:56:41,685][root][INFO] - Experiment Results
+[2022-11-08 15:56:41,685][root][INFO] - Model = Naive Bayes
+[2022-11-08 15:56:41,685][root][INFO] - 
+                  precision    recall  f1-score   support
+
+         ABSTAIN       0.71      0.34      0.46       991
+   Brad Sinclair       0.49      0.64      0.55       991
+Donna Ballantyne       0.43      0.51      0.47      1018
+
+        accuracy                           0.50      3000
+       macro avg       0.54      0.50      0.49      3000
+    weighted avg       0.54      0.50      0.49      3000
+

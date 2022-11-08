@@ -1,0 +1,13 @@
+[2022-11-08 15:56:40,377][root][INFO] - Experiment Results
+[2022-11-08 15:56:40,377][root][INFO] - Model = Dummy Classifier
+[2022-11-08 15:56:40,377][root][INFO] - 
+                         precision    recall  f1-score   support
+
+                ABSTAIN       0.33      0.33      0.33     21288
+       Marilyn CRAWFORD       0.33      0.33      0.33     21257
+Mohamed Kalim KARATELLA       0.34      0.33      0.33     21502
+
+               accuracy                           0.33     64047
+              macro avg       0.33      0.33      0.33     64047
+           weighted avg       0.33      0.33      0.33     64047
+

@@ -1,0 +1,7 @@
+model:
+  name: Naive Bayes
+dataset:
+  name: experiment_2_0
+  file: data/experiment_2_data.csv
+  features: byte_length
+  target: mayor

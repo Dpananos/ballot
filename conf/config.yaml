@@ -1,3 +1,13 @@
 defaults:
-  - model: dummy
-  - dataset: experiment_1_0
+  - model: ???
+  - dataset: ???
+  - _self_
+
+hydra:
+  sweep:
+    dir: multirun
+    subdir: ${hydra.job.override_dirname}
+  sweeper:
+    params:
+      model: glob(*)
+      dataset: glob(*)

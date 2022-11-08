@@ -1,0 +1,14 @@
+[2022-11-08 15:56:41,456][root][INFO] - Experiment Results
+[2022-11-08 15:56:41,456][root][INFO] - Model = Naive Bayes
+[2022-11-08 15:56:41,456][root][INFO] - 
+                     precision    recall  f1-score   support
+
+            ABSTAIN       1.00      1.00      1.00       985
+      Andy Mitchell       0.71      0.61      0.66      1011
+Linda Marlene Eales       0.85      0.89      0.87      1012
+          Ron Black       0.78      0.86      0.82       992
+
+           accuracy                           0.84      4000
+          macro avg       0.84      0.84      0.84      4000
+       weighted avg       0.83      0.84      0.83      4000
+
