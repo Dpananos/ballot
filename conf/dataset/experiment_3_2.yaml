@@ -1,0 +1,4 @@
+name: experiment_1
+file: data/experiment_1_data.csv
+features: byte_length
+target: mayor

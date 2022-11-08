@@ -13,19 +13,13 @@ class Experiment:
     model: ScikitModel
     X: ArrayLike
     y: ArrayLike
-    save_dir: str
+    report: str = field(init=False)
 
-    def run(self) -> None:
+    def __post_init__(self) -> None:
         
         Xtrain, Xtest, ytrain, ytest = train_test_split(self.X, self.y, random_state=0, train_size=0.5)
 
         self.model.fit(Xtrain, ytrain)
         ypred = self.model.predict(Xtest)
 
-        report = classification_report(ytest, ypred)
-
-        with open(self.save_dir, 'w') as file:
-            file.write(report)
-
-
-        return None
+        self.report = classification_report(ytest, ypred)
