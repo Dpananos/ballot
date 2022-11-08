@@ -13,12 +13,18 @@ class ScikitModel(Protocol):
 
 
 def dummy_classifier() -> ScikitModel:
+    '''
+    Helper function to initialize a dummy classifier
+    '''
 
     dummy_clf = DummyClassifier(strategy="uniform")
 
     return dummy_clf
 
 def naive_bayes_classifier() -> ScikitModel:
+    '''
+    Helper function to initialize a naive bayes classifier.
+    '''
 
     # Here is the OHE'er
     one_hot_encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)

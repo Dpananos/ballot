@@ -1,0 +1,8 @@
+params:
+  experiment_name: experiment-1
+  features: byte_length
+  target: mayor
+
+paths:
+  data: data/selwyn-just-mayor.csv
+  results: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/results.txt
