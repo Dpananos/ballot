@@ -1,7 +1,0 @@
-model:
-  name: Naive Bayes
-dataset:
-  name: experiment_3_2
-  file: data/experiment_3_data.csv
-  features: byte_length
-  target: councillor

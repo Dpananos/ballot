@@ -1,7 +1,0 @@
-model:
-  name: Dummy Classifier
-dataset:
-  name: experiment_2_1
-  file: data/experiment_2_data.csv
-  features: byte_length
-  target: councillor
