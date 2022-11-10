@@ -3,7 +3,6 @@ import numpy as np
 
 import logging
 import hydra
-from omegaconf import OmegaConf
 
 from sklearn.dummy import DummyClassifier
 from sklearn.naive_bayes import MultinomialNB
@@ -12,7 +11,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
+log = log = logging.getLogger(__name__)
 
+@hydra.main(config_path='conf', config_name='config', version_base=None)
 def voting_experiment(cfg) -> None:
 
     df = pd.read_csv(cfg.dataset.file)
@@ -47,13 +48,8 @@ def voting_experiment(cfg) -> None:
     return None
 
 
-@hydra.main(config_path='conf', config_name='config', version_base=None)
-def main(cfg) -> None:
-    print(OmegaConf.to_yaml(cfg))
-    voting_experiment(cfg)
-    return None
 
 
 if __name__ == "__main__":
 
-    main()
+    voting_experiment()
